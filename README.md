@@ -53,6 +53,6 @@ npx playwright install chromium
 npm run test:browser
 ```
 
-Python 3 hosts the disposable localhost test fixture. `CHROMIUM_PATH` optionally selects an installed Chromium. Browser checks cover saving, selection highlights, notes, Markdown download, JSON restore, stale-tab protection, corrupt-data recovery, all six locales, mobile layout and zero external requests. GitHub CI is configured but has not run because this repository has not been published.
+Python 3 hosts the disposable localhost test fixture. `CHROMIUM_PATH` optionally selects an installed Chromium. Browser checks cover saving, selection highlights, notes, Markdown download, JSON restore, stale-tab protection, corrupt-data recovery, all six locales, mobile layout and zero external requests. GitHub source is published. See the repository Actions tab for CI results; this is not a hosted deployment.
 
 UI translations are bundled and unknown technical diagnostics fall back to English. Native browser controls follow the browser language. Independent native-speaker review and touch-selection testing remain pending. The screenshot uses a synthetic article, not scraped or customer data.

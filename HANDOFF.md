@@ -1,3 +1,5 @@
+> Source publication authorized and completed. Repository creation instructions below are historical preparation notes. No hosted deployment or release was created.
+
 # Margin Ferry handoff
 
 Local candidate only; no public source or deployment yet.
