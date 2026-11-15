@@ -1,0 +1,6 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {read,write,recover,KEY} from './storage.js';
+function fixture(){const data=new Map(),storage={getItem:k=>data.has(k)?data.get(k):null,setItem:(k,v)=>data.set(k,v)},locks={request:async(k,fn)=>fn()};return {data,storage,locks};}
+const a={id:'one',title:'One',url:'',body:'Text',highlights:[]};
+test('stale-tab writes never overwrite a new revision',async()=>{const f=fixture();await write(0,()=>({version:1,articles:[a]}),f);await assert.rejects(write(0,()=>({version:1,articles:[]}),f));assert.equal(read(f.storage).articles.length,1);});
+test('quota and missing locks preserve prior data',async()=>{const f=fixture();await write(0,()=>({version:1,articles:[a]}),f);const raw=f.data.get(KEY);f.storage.setItem=()=>{throw Error('quota');};await assert.rejects(write(1,()=>({version:1,articles:[]}),f));assert.equal(f.data.get(KEY),raw);await assert.rejects(write(1,s=>s,{...f,locks:null}));});
+test('recovery requires unchanged corrupt bytes and a fully valid backup',async()=>{const f=fixture();f.data.set(KEY,'broken');assert.throws(()=>read(f.storage));await assert.rejects(recover('old',{version:1,articles:[a]},f));await recover('broken',{version:1,articles:[a]},f);assert.equal(read(f.storage).articles[0].body,'Text');await assert.rejects(recover(f.data.get(KEY),{version:1,articles:[]},f));});

@@ -1,0 +1,13 @@
+{
+  "checked_at": "2026-11-15T01:49:26.157166+00:00",
+  "state": "local candidate; not published",
+  "unit_tests": "9 passed",
+  "browser": "Passed: six locales, drafts, save, exact selection, notes, overlap rejection, escaped Markdown download, JSON restore, stale tabs, invalid import, deletion, corruption recovery, mobile layout, zero external requests",
+  "visual": "Desktop and mobile screenshots inspected",
+  "manual_pending": [
+    "Native-speaker review",
+    "Manual selection comfort and touch interaction",
+    "Public HTTPS deployment"
+  ],
+  "remote_ci": "Not run; no publication authorized"
+}
