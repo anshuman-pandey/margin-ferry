@@ -4,7 +4,7 @@
 
 **An open-source alternative to Readwise Reader’s article highlighting and Markdown export workflow.** Save pasted article text, highlight exact passages, attach notes, and take your reading with you. Browser-local storage. Six interface locales. MIT licensed.
 
-**Status:** locally tested candidate. No public repository, hosted demo or release is claimed. This app does not fetch webpages, read PDFs, sync devices or summarize content.
+**Status:** public source preview at [anshuman-pandey/margin-ferry](https://github.com/anshuman-pandey/margin-ferry). No hosted demo or release is verified. This app does not fetch webpages, read PDFs, sync devices or summarize content.
 
 ![Actual reading interface, with highlights and notes](docs/assets/reading.png)
 
