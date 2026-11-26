@@ -9,5 +9,29 @@
     "Manual selection comfort and touch interaction",
     "Public HTTPS deployment"
   ],
-  "remote_ci": "Not run; no publication authorized"
+  "remote_ci": "Not run; no publication authorized",
+  "current_audit": {
+    "checked_at": "2026-11-26T13:36:59.571702+00:00",
+    "source_head": "113cba3eed559bc397213b0279793b88b27f8003",
+    "source_publication": "https://github.com/anshuman-pandey/margin-ferry",
+    "source_public": true,
+    "ci": {
+      "conclusion": "success",
+      "headSha": "113cba3eed559bc397213b0279793b88b27f8003",
+      "status": "completed",
+      "url": "https://github.com/anshuman-pandey/margin-ferry/actions/runs/43703039744"
+    },
+    "local_core_check": {
+      "exit": 0,
+      "summary": "✔ reject unsafe sources and duplicate article IDs (2.059806ms)\n✔ highlight offsets retain exact text including emoji and survive JSON roundtrip (3.643596ms)\n✔ reject overlapping, stale quote, out-of-range and split-surrogate highlights (2.247188ms)\n✔ Markdown escapes active HTML and markdown from titles, body and notes (0.947019ms)\n✔ merge is idempotent, rejects conflicts and never changes inputs (0.663206ms)\n✔ corrupt and oversized backups fail before storage (10.952238ms)\n✔ stale-tab writes never overwrite a new revision (2.328629ms)\n✔ quota and missing locks preserve prior data (0.297313ms)\n✔ recovery requires unchanged corrupt bytes and a fully valid backup (0.875387ms)\nℹ tests 9\nℹ suites 0\nℹ pass 9\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 168.386197\n"
+    },
+    "release_urls": [],
+    "hosted_demo_url": null,
+    "remaining_gates": [
+      "Native-speaker review",
+      "Manual selection comfort and touch interaction",
+      "Public HTTPS deployment"
+    ],
+    "note": "Historical validation below is retained as dated evidence. Source publication does not establish a hosted deployment."
+  }
 }
